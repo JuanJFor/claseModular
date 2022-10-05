@@ -3,25 +3,33 @@
        dcl-proc FnFormatoFecha Export;  
            dcl-pi *n like(wFechaT);
                  InDate Date(*ISO) Const;
-
            end-pi;
-              //process
-              
+
+              //variables
+
+              dcl-s wFecha like (wFechaT);
+
+              //process              
          
             wFecha = %Char(InDate:*Iso0);
 
             Return wFecha;
+
        end-proc; 
 
         dcl-proc FnFormatoTiempo Export;  
            dcl-pi *n like(wTiempoT);
-                 InTiem Time(*ISO) Const;
+                 InTieme Time(*ISO) Const;
            end-pi;
- 
-              //process
-         
-            wTime = %Char(InTime:*hms);
 
-            Return wTime;
+              //variables
+
+               dcl-s wTiempo like (wTiempoT);
+      
+            //process
+         
+            wTiempo = %Char(InTime:*hms);
+
+            Return wTiempo;
 
          end-proc;    
