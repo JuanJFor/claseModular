@@ -12,9 +12,11 @@
        dcl-s wMsgIdT char(7) Template;
        dcl-s wFechaT varchar(100) Template; 
        dcl-s wTiempoT varchar(100) Template;
+       dcl-s wSqlStateT char(5) Template;
 
        dcl-pr PrInsertar;
          parUsuario likeDs(DsUsuarioT);
+         parSqlState like(wSqlStateT);
        end-pr;
 
        dcl-pr FnFormatoFecha like (wFechaT);
